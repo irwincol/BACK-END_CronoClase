@@ -30,6 +30,9 @@ public class Profesor extends BaseEntity {
     @Column(unique = true, nullable = false)
     private String email;
 
+    @Column(unique = true, nullable = false)
+    private String documentoID;
+
     @Column(nullable = true)
    
     private Boolean activo;
