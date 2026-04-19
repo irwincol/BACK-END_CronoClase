@@ -18,6 +18,7 @@ public class GrupoService {
     private GrupoRepository grupoRepository;
 
     public Grupo crearGrupo(Grupo grupo) {
+        grupo.setId(null); // Ignoramos cualquier id del body para forzar INSERT
         return grupoRepository.save(grupo);
     }
 

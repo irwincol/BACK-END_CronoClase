@@ -17,6 +17,7 @@ public class MatriculaService {
 
     // 1. Crear una sola matrícula
     public Matricula crearMatricula(Matricula matricula) {
+        matricula.setId(null); // Ignoramos cualquier id del body para forzar INSERT
         return matriculaRepository.save(matricula);
     }
 

@@ -18,10 +18,10 @@ public class ProfesorService {
     // Servicio para crear un solo profesor
 
     public Profesor crearProfesor(Profesor profesor) {
-
+        // Ignoramos cualquier id que venga en el body para forzar un INSERT
+        profesor.setId(null);
         profesor.setActivo(true);
         return profesorRepository.save(profesor);
-
     }
 
     // Servicio para crear varios profesores de una sola vez
